@@ -4,6 +4,10 @@ pipeline {
     stage('Build?') {
       steps {
         echo 'First step'
+        waitUntil(initialRecurrencePeriod: 1, quiet: true) {
+          echo 'edsx'
+        }
+
       }
     }
 
